@@ -23,3 +23,67 @@ http://www.dx.com/p/315-mhz-433-92-mhz-superheterodyne-highly-sensitive-wireless
 http://narodmon.ru
 регистрация датчиков - авто
 тип - указать на странице
+
+  /*if(data[0] == 0x1A && data[1] == 0x2D)
+  {
+    Serial.print("[THGN132N,...] Id:");
+    Serial.print(data[3], HEX);
+    Serial.print(", Channel:");
+    Serial.print(channel(data));
+    Serial.print(", temp:");
+    Serial.print(temperature(data));
+    Serial.print(", hum:");
+    Serial.print(humidity(data));
+    Serial.print(", bat:");
+    Serial.print(battery(data));
+    Serial.println();
+  }
+  else if (data[0] == 0xEA && data[1] == 0x4C)
+  {   
+    Serial.print("[THN132N,...] Id:");
+    Serial.print(data[3], HEX);
+    Serial.print(", Channel:");
+    Serial.print(channel(data));
+    Serial.print(", temp:");
+    Serial.print(temperature(data));
+    Serial.print(", bat:");
+    Serial.print(battery(data));
+    Serial.println();
+  }*/
+  
+  // TODO: decode on client side
+/*float temperature(const byte* data)
+{
+  int sign = (data[6]&0x8) ? -1 : 1;
+  float temp = ((data[5]&0xF0) >> 4)*10 + (data[5]&0xF) + (float)(((data[4]&0xF0) >> 4) / 10.0);
+  return sign * temp;
+}
+
+byte humidity(const byte* data)
+{
+  return (data[7]&0xF) * 10 + ((data[6]&0xF0) >> 4);
+}
+
+// Ne retourne qu'un apercu de l'etat de la baterie : 10 = faible
+byte battery(const byte* data)
+{
+  return (data[4] & 0x4) ? 10 : 90;
+}
+
+byte channel(const byte* data)
+{
+  byte channel;
+  switch (data[2])
+  {
+  case 0x10:
+    channel = 1;
+    break;
+  case 0x20:
+    channel = 2;
+    break;
+  case 0x40:
+    channel = 3;
+    break;
+  }
+  return channel;
+}*/
