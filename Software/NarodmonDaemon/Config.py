@@ -23,12 +23,12 @@ import datetime
 
 # Configuration class
 class Config:
-    DEVICE_MAC = 'A603RN6Wweather'
-    DEVICE_NAME = 'ArduWeather'
+    DEVICE_MAC = '<ADD DEVICE IDENTIFIER HERE>' # ADD DEVICE IDENTIFIER HERE
+    DEVICE_NAME = 'ArduWeather' # SET YOUR DEVICE NAME HERE
 
-    COM_PORT = 'COM4'
-    COM_SPEED = 115200
+    COM_PORT = 'COM4'   # SET YOUR PORT HERE
+    COM_SPEED = 115200  # SET YOUR PORT SPEED HERE
     
-    LOGGING_LEVEL = logging.DEBUG
+    LOGGING_LEVEL = logging.INFO     # SET TO "DEBUG" TO SEE MORE LOGS
     
-    SEND_INTERVAL = datetime.timedelta(minutes = 5)
+    SEND_INTERVAL = datetime.timedelta(minutes = 5)  # SET YOUR SEND INTERVAL HERE
