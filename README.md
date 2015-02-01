@@ -11,7 +11,7 @@ The hardware used:
 * 433 MHz Wireless Receiving Module for Oregon Scientific wireless sensors
 
 The wiring is shown on the image below:
-![Wiring](https://github.com/bitlinker/ArduWeather/blob/master/Hardware/Wiring.png)
+![Wiring](https://github.com/bitlinker/ArduWeather/blob/master/Images/wiring.png)
 
 The DHT22 is powered by 5V and it's data out pin is connected to the Arduino D5 pin.
 The BMP085 is powered by 3.3V, SDA is connected to A4 and SCL is connected to A5 - hardware I²C bus is used.
