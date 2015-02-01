@@ -20,6 +20,8 @@
 
 import logging
 import datetime
+import serial
+import sys
 from narodmon import Narodmon
 from DeviceParser import DeviceParser
 from DeviceReader import DeviceReader
